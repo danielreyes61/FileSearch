@@ -2,7 +2,6 @@
  * Daniel Reyes / danielreyes61@gmail.com
  */
 
-
 import javax.swing.*;
 import java.io.*;
 import java.util.Stack;
@@ -18,7 +17,7 @@ public class FileSearch {
                 String x = file.toString();
                 x = x.substring(x.length()-3,x.length());
                 if(x.equalsIgnoreCase("pdf")){
-					System.out.println(file.toString());
+		    System.out.println(file.toString());
 
                 }
             }
@@ -47,26 +46,19 @@ public class FileSearch {
     }
     
     public static File chooseDirectory() {
-
         JFileChooser jfc = new JFileChooser();
-
         jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
         int openOutcome = jfc.showOpenDialog(null);
-
         if (openOutcome != JFileChooser.APPROVE_OPTION) {
-
             System.exit(0);
         }
-
         return jfc.getSelectedFile();
-
     }
 
     public static void main(String[] args) {
         NonRecursiveFileSearch(chooseDirectory());
         System.out.println("");
-		    RecursiveFileSearch(chooseDirectory());
-		    System.out.println("");
+	RecursiveFileSearch(chooseDirectory());
+	System.out.println("");
     }
 }
