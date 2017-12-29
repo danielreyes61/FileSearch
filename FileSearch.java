@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.io.*;
 import java.util.Stack;
 
-public class L8232DRey {
+public class FileSearch {
 
     public static void RecursiveFileSearch(File root) {
         if(root.listFiles()!=null){
